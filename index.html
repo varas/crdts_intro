@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+        <title>CRDTs</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -40,51 +40,81 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+                <section data-background="img/blackhole.gif">
+                    <h1 style='color: #a9a9a9'>CRDT<small>s</small></h1>
+                    <h4 style='color: #a9a9a9'>Convergent States</h4>
+                </section>
+
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+                    <h1>CRDT</h1>
+                    <h3>Conflict-free<br>Replicate<br>Data<br>Type</h3>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
+                    <h1>CAP</h1>
+                    <h5></h5>
 					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+                    <img src="img/ca.png">
 					</p>
+				</section>
+
+                <section data-background="img/smoke.gif">
+                    <h2 style='color: #a9a9a9'>
+                        Full Availability
+					</h2>
+                    <h1 style='color: #a9a9a9'>+</h1>
+                    <h2 style='color: #a9a9a9'>
+                        Convergent Consistency
+					</h2>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+                    <h2>Strong Eventual Consistency</h2>
+                    <p>same <i>unordered</i> updates >>> same state</p>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+                    <h2>Conflict-free ?</h2>
+                    <h3>Avoid Consensus</h3>
+                    <h3><img src='img/glasses.png' width="30%"></h3>
+                    <ul>
+                        <li>No Leaders</li>
+                        <li>No Gossip</li>
+                        <li>No Conflict</li>
+                        <li>No Latency</li>
+                    </ul>
+				</section>
+
+                <section data-background="img/burlaos.gif">
+				</section>
+
+				<section>
+                    <h2>Data Type ?</h2>
+                    <p>
+                    Data Structure with Algebraic Constraints
+                    </p>
+				</section>
+
+				<section>
+                    <h3>Why Algebraic Constraints?</h3>
+                    <br>
+                        <h4>Mathematical properties guaranteed</h4>
+                    <br>
+                        <h4>Great mutability boundary</h4>
+                            <ul>
+                                <li>Monads</li>
+                                <li>Spark RDD</li>
+                                <li>Riak Data Types</li>
+                                <li>Aeron UDP firehose</li>
+                            </ul>
+				</section>
+
+				<section>
+                    <h2>Constraints Bonus</h2>
+                    <ol>
+                        <li>Easier to reason about</li>
+                    </ol>
 				</section>
 
 				<section>
