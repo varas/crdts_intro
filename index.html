@@ -51,6 +51,23 @@
 				</section>
 
 				<section>
+                    <img src="img/warning.png" style="height: 200px;" >
+                    <h3>Disclaimer:</h3>
+                    <br>
+                    <blockquote>
+                        <h3>unimplemented !</h3>
+                    </blockquote>
+                    <br>
+                    <p>rigor in progress</p>
+				</section>
+
+				<section>
+                    <h3>Context</h3>
+                    <br>
+                    <h2>Dist Sys stuff</h2>
+				</section>
+
+				<section>
                     <h1>CAP</h1>
                     <h5></h5>
 					<p>
@@ -58,14 +75,32 @@
 					</p>
 				</section>
 
-                <section data-background="img/smoke.gif">
-                    <h2 style='color: #a9a9a9'>
+				<section>
+                    <h2>
                         Full Availability
 					</h2>
-                    <h1 style='color: #a9a9a9'>+</h1>
-                    <h2 style='color: #a9a9a9'>
-                        Convergent Consistency
+                    <h1>+</h1>
+                    <h2>
+                        Best Available Consistency
 					</h2>
+				</section>
+
+                <section>
+                    <h3>
+                        P + A + Best possible C
+                    </h3>
+				</section>
+
+                <section>
+                    <h3>
+                        Mathematical Proof
+                    </h3>
+				</section>
+
+                <section data-background="img/burlaos.gif">
+                    <h3 style="color: #a9a9a9">
+                    cómo se te queda el cuerpo?
+                    </h3>
 				</section>
 
 				<section>
@@ -77,7 +112,7 @@
 				<section>
                     <h2>Bonus</h2>
                         <br>
-                        <h5>diff updates >>> same state on convergency</h5>
+                        <h5>diff or dup updates >>> same state on convergency</h5>
                         <br>
                         <h5>no merge coordination</h5>
 				</section>
@@ -85,79 +120,92 @@
 				<section>
                     <h2>Conflict-free ?</h2>
                     <h3>Avoid Consensus</h3>
-                    <h3><img src='img/glasses.png' width="30%"></h3>
+                    <h3><p class="fragment fade-in"><img src='img/glasses.png' width="50%"></p></h3>
                     <ul>
                         <li>No Leaders</li>
-                        <li>No Gossip</li>
                         <li>No Conflict</li>
+                        <li>No Concurrency control</li>
                         <li>No Latency</li>
                     </ul>
 				</section>
 
-                <section data-background="img/burlaos.gif">
+                <section>
+                    <h2>On partition</h2>
+
+                    <h4>Writes</h4>
+
+                    remain available on all nodes
+
+                    <br>
+                    <br>
+                    <h4>Reads</h4>
+
+                    best partial state available
 				</section>
 
 				<section>
                     <h2>Data Type ?</h2>
                     <p>
-                    Data Structure with Algebraic Constraints
+                        Algebraic Structure with some constraints
+                    </p>
+                    <br>
+                    <br>
+                    <h4 class="fragment fade-in">Algebraic struct?</h4>
+                    <p class="fragment fade-in">
+                        Set with arithmetic properties
                     </p>
 				</section>
 
 				<section>
                     <h3>Why Algebraic Constraints?</h3>
                     <br>
-                        <h4>Mathematical properties guaranteed</h4>
+                    <h4>Mathematical properties guaranteed</h4>
                     <br>
-                        <h4>Great mutability boundary</h4>
-                            <ul>
-                                <li>Monads</li>
-                                <li>Spark RDD</li>
-                                <li>Riak Data Types</li>
-                                <li>Aeron UDP firehose</li>
-                            </ul>
+                    <h4>Great mutability boundary</h4>
+				</section>
+
+                <section data-background="img/what.gif">
+                    <h2 style="color: #fff">Mutability boundary ?</h2>
 				</section>
 
 				<section>
-                    <h2>Constraints Bonus</h2>
-                    <ol>
-                        <li>Easier to reason about</li>
-                    </ol>
+                    <h3>Bounded Mutability Structs Scale</h3>
+                    <br>
+                    <ul>
+                        <li>Monads</li>
+                        <li>Spark RDD</li>
+                        <li>Riak Data Types</li>
+                        <li>Aeron UDP firehose</li>
+                    </ul>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
+                    <h2>Constraints</h2>
+                    <strong>Monotonic</strong>
+                    <p>
+                        No rollback
 					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+                    <p>
+                    <strong>Merge</strong>
+                        <ul>
+                            <li>Associative</li>
+                            <li>Commutative</li>
+                            <li>Idempotent</li>
+                        </ul>
 					</p>
 				</section>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
+                <section data-background="img/confused.gif">
+                    <h2 style="color: #ccc">yes ... limited use cases</h2>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+                <section data-background="img/smoke.gif">
+				</section>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
+                <section data-background="img/dance.gif">
+                    <h2 class="fragment current-visible" data-fragment-index="1">CAP</h2>
+                    <h2 class="fragment current-visible" data-fragment-index="2">get outta my way</h2>
+                    <h1 class="fragment current-visible" data-fragment-index="3">i'm a CRDT!</h1>
 				</section>
 
 				<section>
