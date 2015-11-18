@@ -54,11 +54,11 @@
                     <img src="img/warning.png" style="height: 200px;" >
                     <h3>Disclaimer:</h3>
                     <br>
-                    <blockquote>
-                        <h3>unimplemented !</h3>
-                    </blockquote>
+                    <h2>no experience !</h2>
                     <br>
+                    <blockquote>
                     <p>rigor in progress</p>
+                    </blockquote>
 				</section>
 
 				<section>
@@ -93,7 +93,7 @@
 
                 <section>
                     <h3>
-                        Mathematical Proof
+                        Mathematical Proof !
                     </h3>
 				</section>
 
@@ -112,9 +112,9 @@
 				<section>
                     <h2>Bonus</h2>
                         <br>
-                        <h5>diff or dup updates >>> same state on convergency</h5>
+                        <h5>diff & dup updates >>> same state on convergency</h5>
                         <br>
-                        <h5>no merge coordination</h5>
+                        <h5>no merge coordination *</h5>
 				</section>
 
 				<section>
@@ -161,7 +161,10 @@
                     <br>
                     <h4>Mathematical properties guaranteed</h4>
                     <br>
-                    <h4>Great mutability boundary</h4>
+                    <h4>Great boundary for:</h4>
+                    <p>non determinism</p>
+                    <p>mutable state</p>
+                    <p>latency</p>
 				</section>
 
                 <section data-background="img/what.gif">
@@ -181,284 +184,97 @@
 
 				<section>
                     <h2>Constraints</h2>
-                    <strong>Monotonic</strong>
+                    <h4>Monotonic</h4>
                     <p>
                         No rollback
 					</p>
-                    <p>
-                    <strong>Merge</strong>
-                        <ul>
-                            <li>Associative</li>
-                            <li>Commutative</li>
-                            <li>Idempotent</li>
-                        </ul>
-					</p>
+                    <br>
+                    <h4>Merge func</h4>
+                            <p><strong >Associative</strong> a·(b·c) = (a·b)·c</p>
+                            <p><strong>Commutative</strong> a·b = b·a</p>
+                            <p><strong>Idempotent *</strong> a·a = a</p>
 				</section>
 
                 <section data-background="img/confused.gif">
                     <h2 style="color: #ccc">yes ... limited use cases</h2>
 				</section>
 
-                <section data-background="img/smoke.gif">
+                <section>
+                    <h2>Common use cases</h2>
+                    <p><strong>What</strong> Counters, rankings, registers, sets, graphs</p>
+                    <p><small>* composable (maps...)</small></p>
+                    <p><strong>When</strong> Performance, scale, intermitent connections</p>
 				</section>
 
+                <section>
+                    <h2>CRDT types</h2>
+                    <h3>State based</h3>
+                    <h3>Operation based</h3>
+				</section>
+
+                <section>
+                    <h3>State based</h3>
+                    <p>idempotent</p>
+                    <p>local update & merge</p>
+                    <img src="img/state-lattice.gif" style="height: 300px">
+                    <br>
+                    <small>practical in small data</small>
+				</section>
+
+                <section>
+                    <h2>Operation based</h2>
+                    <p>non idempotent</p>
+                    <p>requires delivery once</p>
+                    <p>=/</p>
+				</section>
+
+                <section>
+                    <h2>Examples</h2>
+                    <p>several approaches</p>
+                    <p>libs: no detail knowledge required!</p>
+                </section>
+
+                <section>
+                    <h2>Detail: counter</h2>
+                    <p>Built on: Sum & Max</p>
+				</section>
+
+                <section>
+                    <h2>Detail: decreasable counter</h2>
+                    <p>Built on: Sum & VVectors</p>
+				</section>
+
+                <section>
+                    <h2>Detail: event set</h2>
+                    <p>Built on: Union & VClocks & LWW</p>
+				</section>
+
+                <!--
                 <section data-background="img/dance.gif">
-                    <h2 class="fragment current-visible" data-fragment-index="1">CAP</h2>
-                    <h2 class="fragment current-visible" data-fragment-index="2">get outta my way</h2>
+                    <h2 class="fragment current-visible" data-fragment-index="1">CAP ruling</h2>
+                    <h2 class="fragment current-visible" data-fragment-index="2">get da f*ck out</h2>
                     <h1 class="fragment current-visible" data-fragment-index="3">i'm a CRDT!</h1>
 				</section>
+                -->
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+                <section data-background="img/blackhole.gif">
+                    <h1 style='color: #a9a9a9'>the end ?</h1>
+                </section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
+                <section>
+                    <h2>Further</h2>
+                    <h3>@cmeik</h3>
+                    <p>Intro resources<br><i>https://gist.github.com/SeanTAllen/4c9e75de187d20f6c63e</i></p>
+                    <p>Riak Data Types<br><i>http://docs.basho.com/riak/latest/dev/using/data-types/</i></p>
+                    <p>A Language for Distributed, Eventually Consistent Computations http://lasp-lang.org/</p>
 				</section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+                <section data-background="img/smoke.gif">
+                    <h2>Much further</h2>
+                    <small>non crdt, but also consistency through modelling</small>
+                    <h3>@palvaro</h3>
+                    <p>Peter Alvaro et al. http://people.ucsc.edu/~palvaro/</p>
+                    <p>Youtube: "I See What You Mean"<br><i>Temporal semantics for Distributed Systems</i></p>
 				</section>
 
 			</div>
